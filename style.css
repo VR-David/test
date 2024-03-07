@@ -1,0 +1,357 @@
+/* Default styles for larger screens */
+html {
+	background-color: #eff6ff;
+}
+
+body {
+	position: absolute;
+	height: 90vh;
+	background-color: #ffffff;
+	display: flex;
+	font-family: 'Barlow';
+	top: 50%;
+	left: 50%;
+	font-weight: 500;
+	color: #2a4a5c;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+header img {
+	position: relative;
+	max-height: 100%;
+}
+
+header .img-logo {
+	position: absolute;
+	height: 3.5%;
+	z-index: 1;
+	margin: 2.5vh 2.5vh;
+}
+
+.main {
+	position: relative;
+	flex-wrap: wrap;
+	display: flex;
+	height: 100%;
+	font-family: 'Barlow';
+	font-weight: 400;
+	width: 30vw; /* Use vw (viewport width) for width */
+	gap: 3vw;
+	padding: 0px 4vw;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #ffffff;
+	-webkit-box-shadow: 10px 10px 30px -2px rgba(123, 138, 146, 0.43);
+	-moz-box-shadow: 10px 10px 30px -2px rgba(123, 138, 146, 0.43);
+	box-shadow: 10px 10px 30px -2px rgba(123, 138, 146, 0.2);
+}
+
+h1 {
+	margin: 0 0;
+	padding: 0 0;
+	font-weight: 500;
+	font-size: 1.6vw; /* Use vw for font size */
+}
+h3 {
+	color: #7b8a92;
+	margin: 0 0;
+	font-weight: 500;
+	padding: 0 0;
+	font-size: 1.1vw; /* Use vw for font size */
+}
+h5 {
+	margin: 0;
+	padding: 0;
+}
+h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+	font-size: 0.9vw;
+}
+h6 {
+	margin: 0;
+}
+
+.main-button {
+	display: flex;
+	gap: 1vw;
+}
+
+.main-button button {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	margin: 0 0;
+	font-size: 0.8vw; /* Use vw for font size */
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5vh;
+	border: none;
+	color: #ffffff;
+	transition: 0.2s ease-in-out;
+}
+
+.main-button img {
+	max-height: 1.3vw; /* Use vw for max height */
+	margin: 0 1.2vw 0 0.5vw;
+}
+
+.main-button__facebook {
+	background-color: #255a9b;
+}
+
+.main-button__linkedin {
+	background-color: #0076b6;
+}
+
+.main-button button:hover {
+	background-color: #0000008b;
+	cursor: pointer;
+}
+.main-button button:active {
+	background-color: #000000;
+	cursor: pointer;
+}
+.main h2 {
+	text-align: center;
+}
+
+.main-or {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-or hr {
+	width: 10vw; /* Use vw for width */
+	height: 1px;
+	margin: 0 1vw; /* Use vw for margin */
+	background-color: #afafaf;
+	border: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+	.main {
+		width: 40vh;
+		padding: 0 2vw;
+	}
+
+	h1 {
+		font-size: 3vw;
+	}
+
+	h3 {
+		font-size: 2.5vw;
+	}
+
+	.main-button button {
+		font-size: 1.5vw;
+	}
+
+	.main-button img {
+		max-height: 1.5vw;
+	}
+
+	.main-or hr {
+		width: 14vw;
+		margin: 0 2vw;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.main {
+		width: auto;
+		padding: 0 2vw;
+		height: 37.19999999999993vh;
+	}
+	header img {
+		position: relative;
+		max-height: 110vw;
+	}
+	body {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	header .img-logo {
+		height: 2%;
+	}
+}
+.main-form {
+	display: flex;
+	height: auto;
+	gap: 3vw;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.main-form__text {
+	display: flex;
+	gap: 2vw;
+}
+.main-form__text div {
+	border: solid 1px #eeeeee;
+	width: 100%;
+	display: flex;
+	height: 5vh;
+	max-height: 5vh;
+	flex-direction: column;
+	justify-content: space-around;
+	transition: 0.2s ease-in-out;
+}
+.main-form__text input {
+	border: NONE;
+	width: auto;
+	font-size: 0.9vw;
+	padding: 0;
+	margin: 0 0 0 0.4vw;
+	transition: 0.2s ease-in-out;
+}
+.main-form__text p {
+	margin: 0 0;
+}
+.main-form__text input:focus {
+	border: none;
+	outline: 0;
+	font-size: 0.95vw;
+	width: auto;
+}
+.main-form__text input:focus ~ .main-form__text div,
+.main-form__text div:focus-within {
+	border-left: solid 1px #3698fb;
+}
+.main-form__text label {
+	font-size: 0.8vw;
+	margin: 0.1vw 0.4vw;
+	text-align: left;
+	transition: 0.2s ease-in-out;
+}
+
+.main-form__text div:focus-within label,
+.main-form__text label:focus-within {
+	color: #3698fb;
+	font-size: 0.7vw;
+}
+.main-form__radio {
+	display: flex;
+	flex-direction: row;
+	font-size: 1vw;
+	gap: 1.8vw;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.main-form__radio p {
+	margin: 0;
+}
+.main-form__radio input[type='radio'] {
+	display: none; /* Скрыть стандартные радио-кнопки */
+}
+
+.main-form__radio label {
+	position: relative;
+	cursor: pointer;
+	font-size: 1vw;
+}
+
+.main-form__radio label::before {
+	content: '';
+	position: relative; /* Оставляем relative */
+	display: inline-block;
+	width: 1vw;
+	height: 1vw;
+	top: 0.1vw;
+	border: 0.2vw solid #ddd; /* Добавляем границу */
+	border-radius: 50%;
+	background-color: #fff;
+	box-sizing: border-box;
+	margin-right: 0.6vw; /* Добавляем небольшой отступ между радио-кнопкой и текстом */
+}
+
+.main-form__radio input[type='radio']:checked + label::before {
+	border: 0.28vw solid #3698fb; /* Изменяем цвет границы при выборе */
+}
+.main-form__info {
+	width: 15.5vw;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(123, 138, 146, 0.36);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(123, 138, 146, 0.36);
+	box-shadow: 0px 0px 30px 0px rgba(123, 138, 146, 0.36);
+	padding: 1vw;
+	border-radius: 0.5vw;
+}
+.main-form__checkbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.main-form__radio label::after {
+	content: '\f059'; /* Код символа Font Awesome для вопроса */
+	font-family: 'Font Awesome 5 Free'; /* Имя шрифта Font Awesome */
+	position: relative;
+	font-size: 0.6vw; /* Размер иконки */
+	color: #dddddd; /* Цвет иконки */
+	margin-right: 0.2vw;
+	top: -0.1vw;
+	left: 0.2vw;
+}
+.main-form__checkbox input[type='checkbox'] {
+	appearance: none;
+	-webkit-appearance: none;
+	height: 1vw;
+	width: 1vw;
+	border-radius: 0.2vw;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	display: flex;
+	margin: 0;
+	margin-right: 0.5vw;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s ease-in-out;
+	flex-direction: row;
+}
+.main-form__checkbox label {
+	cursor: pointer;
+	color: #ddd;
+	font-size: 0.8vw;
+}
+.main-form__checkbox label a {
+	color: #3698fb;
+}
+.main-form__checkbox input[type='checkbox']::after {
+	content: '\f00c';
+	font-family: 'Font Awesome 6 Free';
+	color: #fff;
+	font-size: 0.8vw;
+	display: none;
+}
+.main-form__checkbox input[type='checkbox']:checked {
+	background-color: #3698fb;
+}
+.main-form__checkbox input[type='checkbox']:checked::after {
+	display: block;
+}
+.main-form__button button {
+	border: none;
+	background-color: #3698fb;
+	color: #fff;
+	font-weight: 500;
+	padding: 1.3vh 3.3vw;
+	border-radius: 0.3vw;
+	cursor: pointer;
+	transition: 0.15s ease-in-out;
+}
+.main-form__button button:hover {
+	background-color: #eee;
+	color: #3698fb;
+}
+.main-form__button button:active {
+	background-color: #fff;
+	color: #fff;
+}
